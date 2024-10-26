@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Match Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-chart-pie"></i> Resume Match Result</h1>
+        </header>
+        <main>
+            <div class="result-card">
+                <h2>Match Percentage</h2>
+                <div class="percentage-circle" data-percentage="{{ match_percentage|round|int }}">
+                    <span class="percentage-number">{{ match_percentage|round|int }}%</span>
+                </div>
+            </div>
+            
+            <div class="result-card">
+                <h2><i class="fas fa-comment-alt"></i> Feedback:</h2>
+                <p>{{ feedback }}</p>
+            </div>
+            
+            <a href="/" class="btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
+        </main>
+        <footer>
+            <p>&copy; 2023 Resume Matcher. All rights reserved.</p>
+        </footer>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
