@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 # Configure the API with your key
 # This step is crucial for authentication with Google's servers
-genai.configure(api_key='AIzaSyCktDC2_dqfLh3GcrwGBh2XhkuQs9V1Lxg')
+genai.configure('GEMINI_API_KEY')
 
 # Initialize the Gemini Pro model
 # 'gemini-pro' is the model name for the text-only version
